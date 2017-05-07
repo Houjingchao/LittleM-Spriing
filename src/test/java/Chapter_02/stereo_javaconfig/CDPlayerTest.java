@@ -1,6 +1,5 @@
 package Chapter_02.stereo_javaconfig;
 
-import javafx.scene.media.MediaPlayer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +14,12 @@ import static org.junit.Assert.assertNotNull;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = CDPlayerConfig.class)//test 3.1
 public class CDPlayerTest {
+
     @Autowired
     private CompactDisc cd;
+
+    @Autowired
+    private MediaPlayer player;
 
     @Test
     public void cdShouldNotBeNull() {
@@ -28,4 +31,8 @@ public class CDPlayerTest {
         cdPlayerTest.cdShouldNotBeNull();
     }
 
+    @Test
+    public void play() {
+        player.play();
+    }
 }

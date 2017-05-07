@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
  * Created by Hjc on 2017/5/7.
  */
 @Configuration
-//@ComponentScan
-@ComponentScan(basePackages = "Chapter_02")
+@ComponentScan
+//@ComponentScan(basePackages = "Chapter_02")
 public class CDPlayerConfig {
 }
